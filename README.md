@@ -69,16 +69,13 @@ This table categorizes plant images into **Healthy**, **Unhealthy**, and **No Le
 ### 📦 Prerequisites
 - Python 3.7+ (`python --version`)
 - pip package manager (`pip --version`)
-- TensorFlow 2.x
-- scikit-learn
 - pandas
-- numpy
 - Dataset in PlantVillage-AugNoLeaves.zip
 
 
 ### ⚙️ Project Setup
 1. Clone the repository:
-`It may takes a few minutes.`
+`It may take a few minutes.`
 
 ```bash
 git clone https://github.com/FBK-OpenIoT/PlantVillage-AugNoLeaves.git
@@ -105,7 +102,7 @@ source plantenv/bin/activate
 4. Install Required Packages:
 ```bash
 pip install --upgrade pip
-pip install tensorflow scikit-learn pandas numpy pillow
+pip install pandas
 ```
 
 
@@ -160,45 +157,10 @@ def collect_data(dataset_path):
                         print(f"Warning: Skipping non-image or hidden file {image_file}")
     
     return pd.DataFrame({'file_path': file_paths, 'class': labels})
-```
-
-
-
-
-7. Collect the dataset and split it into train, validation, and test sets:
-```bash
 df = collect_data(dataset_path)
-train_df, test_df = train_test_split(df, test_size=0.2, random_state=1)
-train_df, val_df = train_test_split(train_df, test_size=0.25, random_state=1)
 ```
 
-
-6. Function to collect data from the dataset directory:
-```bash
-# Initialize ImageDataGenerator for image preprocessing
-datagen = ImageDataGenerator(preprocessing_function=preprocess_input)
-
-# Function to create data generator for feeding images into the model
-def create_generator(df, shuffle=False):
-    return datagen.flow_from_dataframe(
-        dataframe=df,
-        x_col='file_path',
-        y_col='class',
-        target_size=image_size,
-        batch_size=batch_size,
-        class_mode='categorical',
-        shuffle=shuffle,
-        color_mode='rgb'
-    )
-
-# Create train, validation, and test data generators
-train_generator = create_generator(train_df, shuffle=True)
-val_generator = create_generator(val_df)
-test_generator = create_generator(test_df)
-```
-
-
-6. Print class distribution in the dataset:
+7. Print class distribution in the dataset:
 ```bash
 # Print class distribution in the dataset
 print(f"📌 Total images found: {len(df)}")
