@@ -22,7 +22,8 @@ This repository contains the code and data representing outcomes of the paper "A
   While currently listed as [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), the dataset was originally [published](https://arxiv.org/pdf/1511.08060) under [CC BY-SA 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/), which this work adheres to.
 
 ## Abstract
-To be put after final submission
+This paper presents a computer vision-based system for early detection of plant leaf diseases, developed using TinyMLOps principles to enable deployment on resource-constrained embedded devices. The solution leverages the MobileNet architecture with a custom classification head that is properly trained using the PlantVillage dataset to distinguish between healthy, unhealthy, and no leaves images. Given the class imbalance of the relabeled dataset, we augmented the underrepresented classes (No leaves) using basic image transformations to improve model generalization. To ensure both high accuracy and computational feasibility, considering that the target device has limited resources, we apply a multi-objective hyperparameter optimization strategy using the Optuna framework, incorporating the NSGA-II algorithm to identify optimal trade-offs between model accuracy (measured by F1-score) and computational constraints (number of model parameters). The optimization process identifies a set of Pareto-optimal models, with the most promising configurations residing in the "knee region", offering strong classification performance with significantly reduced parameter counts. From the Pareto front, we selected a few models that were evaluated on a Raspberry Pi Zero 2W to assess their real-world performance in terms of inference latency, memory usage, and overall suitability for deployment in resource-constrained environments. This poses the basis for building a low-cost solution with commodity devices for early diseases detection in agriculture, including rural areas where computational resources and connectivity are limited.
+Finally, the dataset we used for this work has been made public as an asset of the AgrifoodTEF Data Space.
 
 ## 📂 Dataset Overview
 
@@ -187,8 +188,6 @@ print(df['class'].value_counts())
 
 
 ## Aknowledgements and Citation
-Data contained in this repository has been developed within the FBK research institute. It's usage has been agreed with the owner.
-
 Copyright on the material in this webpage has been transferred to IEEE for MetroInd4.0&IoT 2025: H. Aqasizade, M. Antonini, M. Vecchio and F. Antonelli, "A TinyMLOps-Based Edge AI Approach for Early Detection of Emerging Plant Diseases," 2025 IEEE International Workshop Metrology for Industry4.0 & IoT (MetroInd4.0&IoT), Castelldefels, Spain, 2025.
 
 A final version for the citation with DOI will be provided after publication.
