@@ -5,6 +5,27 @@ This repository contains the code and data representing outcomes of the paper "A
   <img width="260" src="readme/metroindLogo.png">
 </p>
 
+## License
+
+- 📦 **Code** is licensed under the [MIT License](./LICENSE.md).
+
+- 🌱 **Augmented Dataset** (**PlantVillage-AugNoLeaves**) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)  © 2025 by [OpenIoT Research Unit](https://openiot.fbk.eu).
+
+  This dataset is an adaptation of the PlantVillage dataset (originally released under [CC BY-SA 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/)).  
+  The augmentation process involved increasing the representation of the *"Background_without_leaves"* class using the Albumentations library.
+
+  ➤ See full details in the [DATA_LICENSE.md](./DATA_LICENSE.md) file.
+
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width:1em; max-height:1em; margin-left:.2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width:1em; max-height:1em; margin-left:.2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width:1em; max-height:1em; margin-left:.2em;">
+  </a>
+
+- 🗃️ **Original Dataset Source:**  
+  The PlantVillage dataset is available from [Mendeley Data (DOI: 10.17632/tywbtsjrjv.1)](https://data.mendeley.com/datasets/tywbtsjrjv/1).
+  Although it is currently listed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), it was originally [published](https://arxiv.org/pdf/1511.08060) under [CC BY-SA 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/), which this work complies with.
+
 ## Abstract
 To be put after final submission
 
