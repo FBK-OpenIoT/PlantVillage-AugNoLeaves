@@ -87,8 +87,6 @@ This table categorizes plant images into **Healthy**, **Unhealthy**, and **No Le
 - Python 3.7+ (`python --version`)
 - pip package manager (`pip --version`)
 - pandas
-- Dataset in PlantVillage-AugNoLeaves.zip
-
 
 ### ⚙️ Project Setup
 1. Clone the repository:
