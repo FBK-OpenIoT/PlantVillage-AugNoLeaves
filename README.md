@@ -100,23 +100,62 @@ cd PlantVillage-AugNoLeaves
 unzip PlantVillage-AugNoLeaves.zip
 cd PlantVillage-AugNoLeaves-Dataset
 ```
-
-2. Make sure your dataset is structured like this:
+2. Extract the dataset
 ```bash
-dataset_path/
-├── Apple___healthy/
-├── Apple___Black_rot/
-├── Background_without_leaves/
-├── ...
+./unzip_dataset.sh
 ```
 
-3. Set up a virtual environment:
+3. Make sure your dataset is structured like this:
+```bash
+extracted_dataset/
+├── Apple___Apple_scab/
+├── Apple___Black_rot/
+├── Apple___Cedar_apple_rust/
+├── Apple___healthy/
+├── Background_without_leaves/
+├── Blueberry___healthy/
+├── Cherry___healthy/
+├── Cherry___Powdery_mildew/
+├── Corn___Common_rust/
+├── Corn___Northern_Leaf_Blight/
+├── Corn___healthy/
+├── Corn___Cercospora_leaf_spot Gray_leaf_spot/
+├── Grape___Black_rot/
+├── Grape___Esca_(Black_Measles)/
+├── Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/
+├── Grape___healthy/
+├── Orange___Haunglongbing_(Citrus_greening)/
+├── Peach___Bacterial_spot/
+├── Peach___healthy/
+├── Pepper,_bell___Bacterial_spot/
+├── Pepper,_bell___healthy/
+├── Potato___Early_blight/
+├── Potato___Late_blight/
+├── Potato___healthy/
+├── Raspberry___healthy/
+├── Soybean___healthy/
+├── Squash___Powdery_mildew/
+├── Strawberry___healthy/
+├── Strawberry___Leaf_scorch/
+├── Tomato___Bacterial_spot/
+├── Tomato___Early_blight/
+├── Tomato___Late_blight/
+├── Tomato___Leaf_Mold/
+├── Tomato___Septoria_leaf_spot/
+├── Tomato___Spider_mites Two-spotted_spider_mite/
+├── Tomato___Target_Spot/
+├── Tomato___Tomato_mosaic_virus/
+├── Tomato___Tomato_Yellow_Leaf_Curl_Virus/
+├── Tomato___healthy/
+```
+
+1. Set up a virtual environment:
 ```bash
 python3 -m venv plantenv
 source plantenv/bin/activate
 ```
 
-4. Install Required Packages:
+1. Install Required Packages:
 ```bash
 pip install --upgrade pip
 pip install pandas
@@ -127,7 +166,7 @@ pip install pandas
 5. Load the Dataset:
 ```bash
 # Path to the dataset
-dataset_path = dataset_path = '/path/to/your/dataset/'
+dataset_path = './extracted_dataset'
 image_size = (128, 128)
 batch_size = 8
 valid_extensions = ('.png', '.jpg', '.jpeg')
