@@ -82,6 +82,11 @@ This table categorizes plant images into **Healthy**, **Unhealthy**, and **No Le
 
 ## 🚀 Getting Started
 
+### 🧪 Compatibility
+This project has been tested and works under:
+
+- macOS Sequoia 15.5
+- Ubuntu 22.04 LTS
 
 ### 📦 Prerequisites
 - Python 3.7+ (`python --version`)
@@ -95,12 +100,11 @@ This table categorizes plant images into **Healthy**, **Unhealthy**, and **No Le
 ```bash
 git clone https://github.com/FBK-OpenIoT/PlantVillage-AugNoLeaves.git
 cd PlantVillage-AugNoLeaves
-unzip PlantVillage-AugNoLeaves.zip
-cd PlantVillage-AugNoLeaves-Dataset
 ```
+
 2. Extract the dataset
 ```bash
-./unzip_dataset.sh
+./extract_dataset.sh
 ```
 
 3. Make sure your dataset is structured like this:
@@ -163,6 +167,9 @@ pip install pandas
 ### 🌱 Dataset Preparation
 5. Load the Dataset:
 ```bash
+import os
+import pandas as pd
+
 # Path to the dataset
 dataset_path = './extracted_dataset'
 image_size = (128, 128)
@@ -224,7 +231,7 @@ print(df['class'].value_counts())
 
 
 
-## Aknowledgements and Citation
+## Acknowledgments and Citation
 Copyright on the material in this webpage has been transferred to IEEE for MetroInd4.0&IoT 2025: H. Aqasizade, M. Antonini, M. Vecchio and F. Antonelli, "A TinyMLOps-Based Edge AI Approach for Early Detection of Emerging Plant Diseases," 2025 IEEE International Workshop Metrology for Industry4.0 & IoT (MetroInd4.0&IoT), Castelldefels, Spain, 2025.
 
 A final version for the citation with DOI will be provided after publication.
